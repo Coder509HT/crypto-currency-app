@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const title = "Coin Currency App Made By CodeWithMarc";
+  const title = "Coin Currency App";
 
   const [coinList, setCoinList] = useState([]);
 
@@ -25,7 +25,7 @@ const App = () => {
 
       <input
         type="text"
-        placeholder="Enter a coin"
+        placeholder="Search coins..."
         onChange={(e) => setCoin(e.target.value)}
       />
 
@@ -55,6 +55,9 @@ const App = () => {
           </div>
         ))}
       </div>
+      <footer className="footer">
+        <h4>Copyright &copy; CodeWithMarc</h4>
+      </footer>
     </div>
   );
 };
