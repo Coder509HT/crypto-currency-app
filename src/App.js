@@ -56,7 +56,10 @@ const App = () => {
         ))}
       </div>
       <footer className="footer">
-        <h4>Copyright &copy; CodeWithMarc</h4>
+        <h5>
+          Copyright &copy; {new Date().getFullYear()}-
+          {new Date().getFullYear() + 1} CodeWithMarc All Right Reserved
+        </h5>
       </footer>
     </div>
   );
