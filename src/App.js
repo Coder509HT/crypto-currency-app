@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const title = "Coin Currency App";
+  const title = "Coin Currency App Made By CodeWithMarc";
 
   const [coinList, setCoinList] = useState([]);
 
@@ -18,8 +18,6 @@ const App = () => {
   const filteredCoin = coinList.filter((newCoin) =>
     newCoin.name.toLowerCase().includes(coin.toLowerCase())
   );
-
-  console.log(coinList);
 
   return (
     <div className="App">
