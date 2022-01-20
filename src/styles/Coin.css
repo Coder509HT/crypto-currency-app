@@ -6,7 +6,7 @@
   min-height: 23rem;
   margin: 1.5rem auto;
   background-color: #000000;
-  box-shadow: 0.1rem 0.1rem 1rem #1b1b1b;
+  box-shadow: 0.1rem 0.1rem 5rem #5c5b5b;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
 }
