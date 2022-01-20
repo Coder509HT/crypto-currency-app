@@ -2,8 +2,8 @@
   outline: none;
   border: none;
   background-color: #3b3b3b;
-  width: clamp(22rem, 50rem, 80%);
-  padding: 0.3rem 0.5rem;
+  width: clamp(22rem, 60rem, 90%);
+  padding: 0.3rem 1rem;
   margin: 2rem auto;
   border-radius: 1rem;
   text-align: center;
