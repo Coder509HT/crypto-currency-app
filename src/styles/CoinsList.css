@@ -2,5 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   padding: 2rem 1rem;
-  background-color: #1b1b1b;
+  margin-top: 2rem;
+  background-color: #040404;
 }

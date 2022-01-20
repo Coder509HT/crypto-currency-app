@@ -10,7 +10,7 @@ const CoinInputSearch = () => {
     <input
       className="search-input"
       type="text"
-      placeholder="Search coins..."
+      placeholder="Search Cryptocurrency..."
       onChange={(e) => dispatch(setCoinToSearch(e.target.value))}
     />
   );
