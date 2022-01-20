@@ -1,0 +1,6 @@
+.coins-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  background-color: #050505;
+}

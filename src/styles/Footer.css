@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+  background-color: #000000;
+}
+
+.copy-right {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #ffa500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

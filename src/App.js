@@ -1,66 +1,21 @@
-import * as axios from "axios";
-import { useEffect, useState } from "react";
-import "./App.css";
+import "./styles/App.css";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import CoinsList from "./components/CoinsList";
+import CoinInputSearch from "./components/CoinInputSearch";
 
 const App = () => {
-  const title = "Coin Currency App";
-
-  const [coinList, setCoinList] = useState([]);
-
-  const [coin, setCoin] = useState("");
-
-  useEffect(() => {
-    axios.get(process.env.REACT_APP_API_LINK).then((response) => {
-      setCoinList(response.data.coins);
-    });
-  }, []);
-
-  const filteredCoin = coinList.filter((newCoin) =>
-    newCoin.name.toLowerCase().includes(coin.toLowerCase())
-  );
+  const title = "Cryptocurrencies App";
+  const year = new Date().getFullYear();
+  const author = "CodeWithMarc";
 
   return (
     <div className="App">
-      <h1 className="title">{title}</h1>
-
-      <input
-        type="text"
-        placeholder="Search coins..."
-        onChange={(e) => setCoin(e.target.value)}
-      />
-
-      <div className="coins">
-        {filteredCoin.map((coin) => (
-          <div key={coin.id} className="coin">
-            <img src={coin.icon} alt="coin-name" className="coin-img" />
-            <div className="coin-aside">
-              <h4 className="coin-title desc">
-                Name: <span className="resp">{coin.name}</span>
-              </h4>
-              <p className="desc">
-                Symbol: <span className="resp">{coin.symbol}</span>
-              </p>
-              <p className="desc">
-                Price: <span className="resp">{coin.price}</span>
-              </p>
-              <p className="desc">
-                Website:{" "}
-                <span className="resp">
-                  <a href={coin.websiteUrl} target="_blank" rel="noreferrer">
-                    {coin.name}
-                  </a>
-                </span>
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <footer className="footer">
-        <h5>
-          Copyright &copy; {new Date().getFullYear()}-
-          {new Date().getFullYear() + 1} CodeWithMarc All Right Reserved
-        </h5>
-      </footer>
+      <Header title={title} />
+      <CoinInputSearch />
+      <CoinsList />
+      <Footer year={year} author={author} />
     </div>
   );
 };
