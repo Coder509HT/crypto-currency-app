@@ -55,7 +55,3 @@
   margin: 0 0.5rem;
   color: #ededed;
 }
-
-.coin:hover {
-  transform: translate(1rem);
-}
